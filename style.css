@@ -8,7 +8,7 @@
 }
 
 body {
-
+    background-color: var(--pale-blue);
 }
 
 p {
@@ -17,26 +17,24 @@ p {
 
 .main {
     width: 100%;
-    max-width: 1440px;
     height: 100vh;
     font-family: 'Red Hat Display', sans-serif;
-    background-image: url(design/desktop-design.jpg);
-    /*background-image: url(./images/pattern-background-desktop.svg);*/
+    background-image: url(images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
     background-color: var(--pale-blue);
+    background-position: top center;
+    background-size: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    flex-wrap: wrap;
 }
 
 .card {
-    width: 450px;
-    height: 695px;
+    max-width: 450px;
+    max-height: 695px;
     border-radius: 15px;
     position: absolute;
-    top: 105px;
-    left: 40px;
     text-align: center;
     background-color: white;
     line-height: 25px;
@@ -101,7 +99,7 @@ p {
     align-items: center;
 }
 
-.order button {
+.order__button {
     background-color: var(--bright-blue);
     color: var(--very-pale-blue);
     width: 80%;
@@ -112,15 +110,22 @@ p {
     font-size: 15px;
     font-weight: bold;
     box-shadow: 0px 20px 15px 0px var(--pale-blue);
-}
-
-.order b {
-    margin-top: 15px;
-}
-
-.order a {
     text-decoration: none;
+}
+
+.order__cancel {
     margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.order__cancel a {
+    text-decoration: none;
     color: var(--desaturated-blue);
 }
 
+
+@media screen and (max-width: 375px) {
+    .main {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+  }
