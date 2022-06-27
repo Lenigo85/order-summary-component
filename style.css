@@ -17,7 +17,9 @@ p {
 
 .background {
     width: 100vw;
+    /*
     height: 100vh;
+    */
     font-family: 'Red Hat Display', sans-serif;
     background-image: url(images/pattern-background-desktop.svg);
     /*
@@ -38,9 +40,9 @@ p {
     height: 700px;
     */
     max-width: calc(100vw - 10%);
-    /*
+    
     max-height: calc(100vh - 5%);
-    */
+    
     border-radius: 15px;
     text-align: center;
     background-color: white;
@@ -48,6 +50,8 @@ p {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .plan__img {
