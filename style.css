@@ -15,39 +15,51 @@ p {
     font-size: 16px;
 }
 
-.main {
-    width: 100%;
+.background {
+    width: 100vw;
     height: 100vh;
     font-family: 'Red Hat Display', sans-serif;
     background-image: url(images/pattern-background-desktop.svg);
+    /*
+    background-image: url(./design/desktop-design.jpg);
+    */
     background-repeat: no-repeat;
     background-color: var(--pale-blue);
     background-position: top center;
-    background-size: auto;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .card {
-    max-width: 450px;
-    max-height: 695px;
+    width: 450px;
+    /*
+    height: 700px;
+    */
+    max-width: calc(100vw - 10%);
+    /*
+    max-height: calc(100vh - 5%);
+    */
     border-radius: 15px;
-    position: absolute;
     text-align: center;
     background-color: white;
     line-height: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.img {
+.plan__img {
     border-radius: 15px 15px 0 0;
+    object-fit: contain;
+
 }
 
 .title {
-    padding-top: 20px;
-    font-size: 27px;
-    font-weight: bold;
+    margin-top: 40px;
+    font-size: 1.8em;
+    font-weight: 600;
     color: var(--dark-blue);
 }
 
@@ -65,7 +77,7 @@ p {
     align-items: center;
     background-color: var(--very-pale-blue);
     margin: 20px 45px;
-    padding: 25px;
+    padding: 25px 40px;
     border-radius: 10px;
 }
 
@@ -115,7 +127,7 @@ p {
 
 .order__cancel {
     margin-top: 15px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .order__cancel a {
@@ -124,8 +136,66 @@ p {
 }
 
 
-@media screen and (max-width: 375px) {
-    .main {
-        background-image: url(images/pattern-background-mobile.svg);
-    }
+@media screen and (max-width: 400px) {
+
+        .main {
+            background-image: url(images/pattern-background-mobile.svg);
+        }
+
+        .card {
+            width: 330px;
+        }
+
+        .title {
+            font-size: 1.4em;
+            margin-top: 30px;
+        }
+
+        .description {
+            padding-left: 35px;
+            padding-right: 35px;
+        }
+
+        .plan {
+            align-self: center;
+            width: 90%;
+            margin: 25px 25px;
+            padding: 20px 25px;
+        }
+
+        .order__button {
+            width: 85%;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+            margin: 0;
+        }
   }
+
+
+  @media screen and (max-width: 300px) {
+        p {
+            font-size: .9em;
+            line-height: 1.4em;
+        }
+
+        .plan {
+            align-self: center;
+            width: 90%;
+            margin: 25px 15px;
+            padding: 20px 20px;
+        }
+
+        .plan__description--text {
+            padding-left: 10px;
+        }
+
+        .plan__description--text b, a, p {
+            font-size: .9em;
+        }
+
+        .order__button {
+            font-size: .8em;
+        }
+  }
+
