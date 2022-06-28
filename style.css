@@ -17,9 +17,9 @@ p {
 
 .background {
     width: 100vw;
-    /*
+    
     height: 100vh;
-    */
+    
     font-family: 'Red Hat Display', sans-serif;
     background-image: url(images/pattern-background-desktop.svg);
     /*
@@ -40,9 +40,7 @@ p {
     height: 700px;
     */
     max-width: calc(100vw - 10%);
-    
     max-height: calc(100vh - 5%);
-    
     border-radius: 15px;
     text-align: center;
     background-color: white;
@@ -50,8 +48,10 @@ p {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    /*
     margin-top: 5%;
     margin-bottom: 5%;
+    */
 }
 
 .plan__img {
@@ -104,8 +104,13 @@ p {
     color: var(--desaturated-blue);
 }
 
-.plan__change {
+.plan__change a {
     font-size: 14px;
+    text-decoration: none;
+}
+
+.plan__change:hover {
+    cursor: pointer;
 }
 
 .order {
@@ -129,6 +134,11 @@ p {
     text-decoration: none;
 }
 
+.order__button:hover {
+    cursor: pointer;
+    background-color: hsl(245, 66%, 72%);
+}
+
 .order__cancel {
     margin-top: 15px;
     margin-bottom: 30px;
@@ -139,8 +149,13 @@ p {
     color: var(--desaturated-blue);
 }
 
+.order__cancel:hover {
+    cursor: pointer;
+}
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 440px ),
+        screen and (max-height: 710px) {
 
         .main {
             background-image: url(images/pattern-background-mobile.svg);
@@ -164,7 +179,7 @@ p {
             align-self: center;
             width: 90%;
             margin: 25px 25px;
-            padding: 20px 25px;
+            padding: 20px 20px;
         }
 
         .order__button {
@@ -177,9 +192,9 @@ p {
   }
 
 
-  @media screen and (max-width: 300px) {
+  @media screen and (max-width: 320px) {
         p {
-            font-size: .9em;
+            font-size: .8em;
             line-height: 1.4em;
         }
 
@@ -195,10 +210,10 @@ p {
         }
 
         .plan__description--text b, a, p {
-            font-size: .9em;
+            font-size: .8em;
         }
 
-        .order__button {
+        .order__button, a {
             font-size: .8em;
         }
   }
